@@ -53,18 +53,20 @@ scale = Vector2(1.7807804, 1.1337278)
 shape = SubResource("CircleShape2D_vef74")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="player/CollisionShape2D" unique_id=290386974]
-position = Vector2(2.8077576, -12.348644)
+position = Vector2(3.369309, -15.876824)
 rotation = 3.1415927
-scale = Vector2(0.23730846, -0.6586019)
+scale = Vector2(0.23730846, -0.4821932)
 sprite_frames = SubResource("SpriteFrames_j5wjh")
 autoplay = "default"
-frame_progress = 0.6126197
+frame_progress = 0.8366994
 
-[node name="Camera2D" type="Camera2D" parent="player/CollisionShape2D" unique_id=1337441620]
-position = Vector2(0.5615516, 0)
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1337441620]
+position = Vector2(-5, -43)
+scale = Vector2(1.7807804, 1.1337278)
 zoom = Vector2(4, 4)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="player" unique_id=127100280]
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=127100280]
+position = Vector2(-1, -5)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="player/StaticBody2D" unique_id=642892941]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=642892941]
 shape = SubResource("WorldBoundaryShape2D_7jktm")
