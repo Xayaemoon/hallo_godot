@@ -1,3 +1,70 @@
 [gd_scene format=3 uid="uid://n07v2alak444"]
 
+[ext_resource type="Script" uid="uid://c54cw2c1g0n3g" path="res://scrips/player.gd" id="1_7jktm"]
+[ext_resource type="Texture2D" uid="uid://b5nqh75tjw484" path="res://asset/Sprites/Enemies/Double/slime_fire_flat.png" id="1_fc0e3"]
+[ext_resource type="Texture2D" uid="uid://d0spj8k3u7hst" path="res://asset/Sprites/Enemies/Double/slime_fire_rest.png" id="2_7jktm"]
+[ext_resource type="Texture2D" uid="uid://cautxh4h8ltqe" path="res://asset/Sprites/Enemies/Double/slime_fire_walk_a.png" id="3_ryrav"]
+[ext_resource type="Texture2D" uid="uid://srfqgcovec24" path="res://asset/Sprites/Enemies/Double/slime_fire_walk_b.png" id="4_eow3j"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vef74"]
+radius = 10.293112
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_j5wjh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_fc0e3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_7jktm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ryrav")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_eow3j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_7jktm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ryrav")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_eow3j")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_7jktm"]
+distance = -23.0
+
 [node name="Game" type="Node2D" unique_id=1387189128]
+
+[node name="player" type="CharacterBody2D" parent="." unique_id=66023494]
+position = Vector2(-1, -5)
+script = ExtResource("1_7jktm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player" unique_id=296088830]
+position = Vector2(-5, -38)
+scale = Vector2(1.7807804, 1.1337278)
+shape = SubResource("CircleShape2D_vef74")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="player/CollisionShape2D" unique_id=290386974]
+position = Vector2(2.8077576, -12.348644)
+rotation = 3.1415927
+scale = Vector2(0.23730846, -0.6586019)
+sprite_frames = SubResource("SpriteFrames_j5wjh")
+autoplay = "default"
+frame_progress = 0.6126197
+
+[node name="Camera2D" type="Camera2D" parent="player/CollisionShape2D" unique_id=1337441620]
+position = Vector2(0.5615516, 0)
+zoom = Vector2(4, 4)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="player" unique_id=127100280]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player/StaticBody2D" unique_id=642892941]
+shape = SubResource("WorldBoundaryShape2D_7jktm")

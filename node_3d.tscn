@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://b802awbn444uk"]
+
+[node name="Node3D" type="Node3D" unique_id=597600202]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3202151, 0)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1353089440]
+
+[node name="Button" type="Button" parent="CanvasLayer" unique_id=118950698]
+anchors_preset = -1
+anchor_right = 0.17400001
+anchor_bottom = 0.20700002
+offset_right = -24.448013
+offset_bottom = -0.13601685

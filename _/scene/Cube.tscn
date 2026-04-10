@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://d0w462vwbfr1k"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_4f8k0"]
-radius = 0.44907188
+radius = 0.41373873
 
 [sub_resource type="BoxMesh" id="BoxMesh_4f8k0"]
 
@@ -14,7 +14,7 @@ radius = 0.44907188
 [node name="RigidBody3D" type="RigidBody3D" parent="cube" unique_id=256328662]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="cube/RigidBody3D" unique_id=672556281]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4088564, 0.34853333, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.03954482, 1.273443, 0)
 shape = SubResource("SphereShape3D_4f8k0")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="cube/RigidBody3D" unique_id=1499533265]
